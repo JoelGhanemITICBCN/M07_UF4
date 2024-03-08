@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Users template</title>
-</head>
-<body>
-    {% if a %}
-    <h1>Entrant a la primera condicio</h1>
-    <p>La variable es: {{ a }} </p>
-    {% else %}
-    <h1>Entrant a la segona condicio</h1>
-    <p>La segona variable es: {{ a }}</p>
-    {% endif %}
-</body>
-</html>
+{% extends "index.html" %}
+{% block content %}
+<h1>Es mostra info dels estudiants d'M06 de DAW 2</h1>
+<ul>
+    {%for usr in s %}
+    <li>Nom: {{ usr.name }} </li>
+    <li>Cognom: {{ usr.surname }} </li>
+    <li>Info: {{ usr.age }} </li>
+    <br>
+    {% endfor %}
+</ul>
+{% endblock content %}

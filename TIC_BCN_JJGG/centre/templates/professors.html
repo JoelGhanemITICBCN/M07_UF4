@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+{% block content %}
+<h1>Es mostra info dels profes de DAW 2</h1>
+<ul>
+    {%for profe in t %}
+    <li>Nom: {{ profe.name }} </li>
+    <li>Cognom: {{ profe.surname }} </li>
+    <li>Info: {{ profe.age }} </li>
+    <br>
+    {% endfor %}
+</ul>
+{% endblock content %}
