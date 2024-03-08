@@ -9,7 +9,16 @@ def index(request):
     return render(request, 'index.html', {'nom':professor["nom"], 'surname':professor["surname"], 'age':professor["age"]})
 
 def students(request):
-    return HttpResponse("Hola student keloke")
+    students = []
+    context = {'s':students}
+    return render(request, 'users.html', context)
 
 def teachers(request):
-    return HttpResponse("Hola profe keloke")
+    teachers = []
+    context = {'t':teachers}
+    return render(request, 'professors.html', context)
+
+def users(request):
+    a = True
+    context = {'a' : a}
+    return render(request, 'users.html',context)
