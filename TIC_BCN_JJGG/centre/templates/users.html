@@ -3,24 +3,20 @@
 <h1>Es mostra info dels estudiants d'M06 de DAW 2</h1>
     <table border="15">
         <tr>
-            <th>ID</th>
             <th>Nom</th>
             <th>Cognom</th>
             <th>Segon cognom</th>
             <th>Correu</th>
-            <th>Curs</th>
-            <th>Mòduls</th>
+            <th>INFO</th>
         </tr>
 
         {% for usr in s %}
             <tr>
-                <td>{{ usr.id }}</td>
                 <td>{{ usr.nom }}</td>
                 <td>{{ usr.cognom1 }}</td>
                 <td>{{ usr.cognom2 }}</td>
                 <td>{{ usr.correu }}</td>
-                <td>{{ usr.curs }}</td>
-                <td>{{ usr.moduls }}</td>
+                <td><a href="{% url 'user' usr.id%}"> + INFO </td>
             </tr>
         {% endfor %}
     </table>
