@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Estudiant</title>
+{% extends "index.html" %}
+{% block content %}
+<h1>Es mostra info de {{s.nom}} d'M06 de DAW 2</h1>
+    <table border="15">
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Cognom</th>
+            <th>Segon cognom</th>
+            <th>Correu</th>
+            <th>Curs</th>
+            <th>Mòduls</th>
+        </tr>
+
+            <tr>
+                <td>{{ s.id }}</td>
+                <td>{{ s.nom }}</td>
+                <td>{{ s.cognom1 }}</td>
+                <td>{{ s.cognom2 }}</td>
+                <td>{{ s.correu }}</td>
+                <td>{{ s.curs }}</td>
+                <td>{{ s.moduls }}</td>
+            </tr>
+                <a href="{% url 'users' %}">  Torna enrere </td>
+    </table>
+{% endblock content %}
+</body>
+</html>

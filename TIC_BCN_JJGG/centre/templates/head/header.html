@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'styles/header.css' %}">
+    <style>
+        header {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="http://localhost:8000/centre/">NAVBAR (index.html-projecte)</a>
+        <li><a href="{% url 'index' %}"> Index</a></li>
+        <li><a href="{% url 'teachers' %}"> Professorat</a></li>
+        <li><a href="{% url 'users' %}"> Alumnat</a></li>
+    </header>
+</body>
+</html>
