@@ -17,3 +17,10 @@
 ## P3
 ## video P3
 [Enlace al video de la p3](https://drive.google.com/file/d/1Dw85qM5qWA9yUZUByZ5FrnahdKh6k2oh/view?usp=sharing)
+
+## Amb as p
+
+![As p](fotos/P3-1.png)
+
+## Sense as p
+![!As p](fotos/P3-2.png)
