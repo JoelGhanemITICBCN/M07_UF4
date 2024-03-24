@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from django.template import Context, loader
+from .forms import PersonForm
 # Create your views here.
 
 def index(request):
@@ -248,3 +249,8 @@ def teacher(request, pk):
         if i['id'] == pk:
             profe = i
     return render(request, 'professor.html', {'t': profe})
+
+def user_form(request):
+    form = PersonForm()
+    context = {'form':form}
+    return render(request,'form.html',context)
