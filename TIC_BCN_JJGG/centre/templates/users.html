@@ -17,6 +17,7 @@
                 <td>{{ usr.cognom2 }}</td>
                 <td>{{ usr.correu }}</td>
                 <td><a href="{% url 'user' usr.id%}"> + INFO </td>
+                <td><a href="{% url 'update_user' usr.id%}"> + EDIT </td>
             </tr>
         {% endfor %}
                 <a href="{% url 'index' %}">  Torna enrere </td>

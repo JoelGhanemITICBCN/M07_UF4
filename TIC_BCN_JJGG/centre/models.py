@@ -7,4 +7,4 @@ class Usuari(models.Model):
     cognom = models.CharField(max_length=50)
     correu = models.CharField(max_length=50)
     rol = models.CharField(max_length=50)
-    moduils = models.CharField(max_length=50)
+    moduls = models.CharField(max_length=50)

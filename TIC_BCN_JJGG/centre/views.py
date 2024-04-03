@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+from .models import Person
 from django.http import HttpResponse
 from django.template import loader
 from django.template import Context, loader
@@ -252,5 +253,13 @@ def teacher(request, pk):
 
 def user_form(request):
     form = PersonForm()
+    
+    if request.method == 'POST': 
+        form = PersonForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
     context = {'form':form}
     return render(request,'form.html',context)
+
+ 
