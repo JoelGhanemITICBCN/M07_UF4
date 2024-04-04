@@ -18,6 +18,7 @@
                 <td>{{ usr.correu }}</td>
                 <td><a href="{% url 'user' usr.id%}"> + INFO </td>
                 <td><a href="{% url 'update_user' usr.id%}"> + EDIT </td>
+                <td><a href="{% url 'delete_user' usr.id%}"> + DELETE </td>
             </tr>
         {% endfor %}
                 <a href="{% url 'index' %}">  Torna enrere </td>
