@@ -1,9 +1,11 @@
 from django.shortcuts import redirect, render
-from .models import Person
 from django.http import HttpResponse
 from django.template import loader
 from django.template import Context, loader
-from .forms import PersonForm
+from .models import Usuari
+from .forms import UsuariForm
+from centre.models import Usuari
+
 # Create your views here.
 
 def index(request):
@@ -252,14 +254,22 @@ def teacher(request, pk):
     return render(request, 'professor.html', {'t': profe})
 
 def user_form(request):
-    form = PersonForm()
+    form = UsuariForm()
     
     if request.method == 'POST': 
-        form = PersonForm(request.POST)
+        form = UsuariForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('index')
     context = {'form':form}
     return render(request,'form.html',context)
 
- 
+def update_user(request, pk):
+    usuari = Usuari.objects.get(id=pk)  
+    form = UsuariForm(request.POST or None, instance=usuari)  
+
+    if form.is_valid():
+        form.save()
+        return redirect('index')  
+
+    return render(request, 'form.html', {'form': form}) 
