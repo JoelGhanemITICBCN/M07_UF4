@@ -5,16 +5,16 @@
         <tr>
             <th>Nom</th>
             <th>Cognom</th>
-            <th>Segon cognom</th>
             <th>Correu</th>
             <th>INFO</th>
+            <th>EDIT</th>
+            <th>DELETE</th>
         </tr>
 
         {% for usr in estudiants %}
             <tr>
                 <td>{{ usr.nom }}</td>
-                <td>{{ usr.cognom1 }}</td>
-                <td>{{ usr.cognom2 }}</td>
+                <td>{{ usr.cognom }}</td>
                 <td>{{ usr.correu }}</td>
                 <td><a href="{% url 'user' usr.id%}"> + INFO </td>
                 <td><a href="{% url 'update_user' usr.id%}"> + EDIT </td>

@@ -10,19 +10,17 @@
             <th>ID</th>
             <th>Nom</th>
             <th>Cognom</th>
-            <th>Segon cognom</th>
             <th>Correu</th>
-            <th>Curs</th>
+            <th>Rol</th>
             <th>Mòduls</th>
         </tr>
 
             <tr>
                 <td>{{ s.id }}</td>
                 <td>{{ s.nom }}</td>
-                <td>{{ s.cognom1 }}</td>
-                <td>{{ s.cognom2 }}</td>
+                <td>{{ s.cognom }}</td>
                 <td>{{ s.correu }}</td>
-                <td>{{ s.curs }}</td>
+                <td>{{ s.rol }}</td>
                 <td>{{ s.moduls }}</td>
             </tr>
                 <a href="{% url 'users' %}">  Torna enrere </td>
