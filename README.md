@@ -32,6 +32,11 @@
 
 ## Captures del CRUD
 
+### Create
 ![Create](fotos/P4/create.png)
+
+### Update
 ![Update](fotos/P4/update.png)
+
+### Delete
 ![Delete](fotos/P4/delete.png)
