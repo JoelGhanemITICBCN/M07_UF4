@@ -1,7 +1,8 @@
 {% extends "index.html" %}
-
 {% block content %}
     <h1>Mostrando información de los profesores de DAW 2</h1>
+
+    <a href="{% url 'index' %}">Torna enrere</a>
 
     <table border="15">
         <tr>
@@ -10,18 +11,16 @@
             <th>Segon cognom</th>
             <th>Correu</th>
             <th>+INFO</th>
-          
         </tr>
 
-        {% for profe in t %}
+        {% for profe in profes %}
             <tr>
                 <td>{{ profe.nom }}</td>
                 <td>{{ profe.cognom1 }}</td>
                 <td>{{ profe.cognom2 }}</td>
                 <td>{{ profe.correu }}</td>
-                <td><a href="{% url 'teacher' profe.id%}"> + INFO </td>
+                <td><a href="{% url 'teacher' profe.id%}">+ INFO</a></td>
             </tr>
         {% endfor %}
-                <a href="{% url 'index' %}">  Torna enrere </td>
     </table>
 {% endblock content %}
